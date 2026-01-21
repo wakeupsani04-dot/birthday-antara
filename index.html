@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Antara ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #14001f, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 70px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      color: rgba(255, 90, 150, 0.6);
+      animation: floatUp linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(0.8); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+    }
+
+    /* Hero */
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 18px;
+      animation: fadeInUp 2s ease;
+    }
+
+    .hero p {
+      max-width: 520px;
+      font-size: 1rem;
+      opacity: 0.9;
+      animation: fadeInUp 3s ease;
+    }
+
+    .welcome {
+      margin-top: 28px;
+      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
+      opacity: 0.95;
+      animation: fadeInUp 2.5s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Button */
+    .btn {
+      margin-top: 35px;
+      padding: 14px 30px;
+      border-radius: 50px;
+      border: none;
+      font-size: 1rem;
+      background: linear-gradient(135deg, #ff5fa2, #ff2d55);
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 12px 35px rgba(255,45,85,0.45);
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+      transition: transform 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Memory / Letter */
+    .card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      padding: 28px;
+      max-width: 520px;
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    /* Secret */
+    #secret {
+      display: none;
+      margin-top: 25px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    footer {
+      padding: 30px;
+      font-size: 0.85rem;
+      opacity: 0.65;
+    }
+
+    audio { display: none; }
+
+    /* Desktop tweak */
+    @media (min-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+      }
+      .gallery img { height: 260px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<script>
+  for(let i=0;i<22;i++){
+    const h=document.createElement('div');
+    h.className='heart';
+    h.innerText='❤';
+    h.style.left=Math.random()*100+'vw';
+    h.style.fontSize=14+Math.random()*20+'px';
+    h.style.animationDuration=6+Math.random()*6+'s';
+    document.body.appendChild(h);
+  }
+</script>
+
+<!-- Voice -->
+<audio id="voice" src="audio/voice.ogg"></audio>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Happy Birthday Antara ✨</h1>
+  <p>
+    Not a normal wish. Not a normal gift.<br>
+    Just something I made — because you matter.
+  </p>
+
+  <div class="welcome">
+    It’s your day today 💖<br>
+    And this little corner of the internet is just for you.
+  </div>
+
+  <button class="btn" onclick="playVoice()">Hear My Voice 🎧</button>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h2>Every Version of You 🤍</h2>
+
+  <div class="gallery">
+    <img src="images/1.jpeg">
+    <img src="images/2.jpeg">
+    <img src="images/3.jpeg">
+    <img src="images/4.jpeg">
+    <img src="images/5.jpeg">
+    <img src="images/6.jpeg">
+    <img src="images/7.jpeg">
+    <img src="images/8.jpeg">
+    <img src="images/9.jpeg">
+    <img src="images/10.jpeg">
+  </div>
+</section>
+
+<!-- STORY -->
+<section>
+  <h2>Our Story</h2>
+
+  <div class="card">
+    We didn’t plan this.<br>
+    We didn’t expect this.<br><br>
+    But somehow, through conversations, silence, fights,
+    and care — we became something that matters.
+  </div>
+</section>
+
+<!-- LETTER -->
+<section>
+  <h2>A Letter For You</h2>
+
+  <div class="card">
+    Antara,<br><br>
+    On your birthday, I don’t want to impress you.
+    I just want to be honest.<br><br>
+    I’m grateful for you —
+    for who you were, who you are,
+    and who you’re becoming.<br><br>
+    I’ll keep choosing effort.
+    I’ll keep choosing growth.
+    And I’ll keep choosing you.
+  </div>
+
+  <button class="btn" onclick="showSecret()">Click when you smile</button>
+  <div id="secret">
+    No matter where life takes us —<br>
+    I’m glad it led me to you ❤️
+  </div>
+</section>
+
+<footer>
+  Built with patience, courage, and real feelings — by Sani
+</footer>
+
+<script>
+  function showSecret(){
+    document.getElementById('secret').style.display='block';
+  }
+
+  function playVoice(){
+    document.getElementById('voice').play();
+  }
+</script>
+
+</body>
+</html>
